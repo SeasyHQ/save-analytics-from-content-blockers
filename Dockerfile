@@ -16,9 +16,7 @@ COPY . /app
 COPY --from=stage /app/node_modules /app/node_modules
 WORKDIR /app
 
-RUN apk add --update 'nodejs<13.0.0'
-RUN apk add --update 'npm<13.0.0'
-RUN apk add --update bash vim nano
+RUN apk add --update 'nodejs<13.0.0' 'npm<13.0.0' bash vim nano
 
 EXPOSE 80
 
